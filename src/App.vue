@@ -1,28 +1,67 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheHeader></TheHeader>
+    <router-view class="container"></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "@/components/TheHeader.vue"
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    TheHeader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0px;
+  font-family: "Avenir", Helveltica, Arial, sans-serif;
+  color: #234;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #234;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.v-enter {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+}
+
+.v-enter-active {
+  transition: all .3s;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px);
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 675px) {
+  .conteudo {
+    display: block;
+  }
 }
 </style>
