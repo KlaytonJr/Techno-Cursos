@@ -1,4 +1,4 @@
-# techno-cursos-api
+# techno-cursos
 
 ## Project setup
 ```
